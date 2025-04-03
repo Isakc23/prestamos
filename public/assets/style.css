@@ -1,0 +1,31 @@
+.sidebar {
+    background-color: #2f2f8b;
+    height: 100%;
+    min-height: 100vh;
+}
+.sidebar .nav-link {
+    color: white;
+    transition: background-color 0.5s;
+}
+.sidebar .nav-link:hover {
+    background-color: #ffffff20;
+}
+.table thead th {
+    background-color: #d1cfcf;
+    vertical-align: middle;
+    text-align: center;
+}
+.titlebar-commands {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+.btn-menu {
+    display: block;
+    padding: 2rem;
+    margin: 0.5rem;
+    background-color: #5050b9;
+    color: white;
+    text-decoration: none;
+    border-radius: 1rem;
+}
