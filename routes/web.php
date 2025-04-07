@@ -4,6 +4,8 @@ use App\Http\Controllers\CatalogosController;
 use App\Http\Controllers\MovimientosController;
 use App\Http\Controllers\ReportesController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 Route::get('/', function () {
     return view('home', ["breadcrumbs" =>[]]);
@@ -28,3 +30,11 @@ Route::get("/empleados/{id}/prestamos", [MovimientosController::class, "empleado
 Route::get("/reportes",[ReportesController::class,"indexGet"]);
 Route::get("/reportes/prestamos-activos",[ReportesController::class,"prestamosActivosGet"]);
 Route::get("/reportes/matriz-abonos",[ReportesController::class,"matrizAbonosGet"]);
+//autenticacion
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+// Registro
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'register']);

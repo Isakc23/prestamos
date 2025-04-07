@@ -7,7 +7,7 @@
     <!-- importar librería de datatables para manipular tablas desde el navegador del usuario-->
     <link href={{ URL::asset('DataTables/datatables.min.css')}} rel="stylesheet"/>
     <script src={{ URL::asset('DataTables/datatables.min.js')}}></script>
-    <link href={{URL::asset("assets/style.css")}} rel="stylesheet" />
+    <link href={{ URL::asset("assets/style.css")}} rel="stylesheet" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prestamos</title>
